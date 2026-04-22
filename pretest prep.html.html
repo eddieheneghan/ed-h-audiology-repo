@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing for Your Child's Hearing Test | Barts Health NHS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nhs-blue: #005eb8;
+            --nhs-dark-blue: #003087;
+            --nhs-bright-blue: #0072ce;
+            --nhs-white: #FFFFFF;
+            --nhs-grey-1: #212b32;
+            --nhs-grey-2: #4c5862;
+            --nhs-grey-4: #d8dde0;
+            --nhs-grey-5: #f0f4f5;
+            --nhs-green: #007f3b;
+            --shadow: 0 4px 12px rgba(0, 50, 135, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #fcfdfe;
+            color: var(--nhs-grey-1);
+            line-height: 1.6;
+        }
+
+        .nhs-header {
+            background-color: var(--nhs-blue);
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nhs-logo {
+            background: white;
+            color: var(--nhs-blue);
+            padding: 5px 12px;
+            font-weight: 700;
+            font-size: 1.4rem;
+            display: inline-block;
+        }
+
+        .trust-name {
+            color: white;
+            margin-left: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--nhs-dark-blue) 0%, var(--nhs-blue) 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .age-card {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--nhs-grey-4);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header {
+            background: var(--nhs-grey-5);
+            padding: 25px;
+            border-bottom: 1px solid var(--nhs-grey-4);
+            text-align: center;
+        }
+
+        .card-header h2 {
+            color: var(--nhs-dark-blue);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .card-header .age-label {
+            color: var(--nhs-blue);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .card-body {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--nhs-green);
+            font-weight: 900;
+        }
+
+        .video-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--nhs-grey-1);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: auto;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .video-btn:hover {
+            background: var(--nhs-blue);
+        }
+
+        .video-btn svg {
+            margin-right: 10px;
+            fill: white;
+        }
+
+        .social-story-section {
+            grid-column: span 2;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--nhs-grey-4);
+            box-shadow: var(--shadow);
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .social-story-section h2 {
+            color: var(--nhs-dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .admin-notice {
+            grid-column: span 2;
+            background: #fff9c4;
+            padding: 20px;
+            border-left: 5px solid #ffeb3b;
+            margin-top: 30px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copy-btn {
+            background: var(--nhs-dark-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--nhs-grey-2);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--nhs-grey-4);
+        }
+
+        @media (max-width: 850px) {
+            .grid { grid-template-columns: 1fr; }
+            .admin-notice, .social-story-section { grid-column: span 1; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nhs-header">
+        <div class="nhs-logo">NHS</div>
+        <div class="trust-name">Barts Health</div>
+    </header>
+
+    <section class="hero">
+        <h1>Preparing for Your Child's Hearing Test</h1>
+        <p>A few simple steps at home can help us get the most accurate results for your child’s hearing.</p>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            
+            <article class="age-card">
+                <div class="card-header">
+                    <span class="age-label">Early Years</span>
+                    <h2>6 Months to 3 Years</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Visual Reinforcement Audiometry (VRA)</strong></p>
+                    <p style="margin-top:10px; font-size:0.9rem; color:var(--nhs-grey-2);">
+                        We use animated toys and sounds to test your child's response to different tones at different volume levels. This indicates what speech information they are able to hear.
+                    </p>
+                    
+                    <ul class="checklist">
+                        <li><strong>Ear Play:</strong> Gently touch your child's ears during play to help them get used to the sensation.</li>
+                        <li><strong>Headphone Intro:</strong> If you have earmuffs, earphones or headphones, practice your child wearing these. For example, when your child is watching a show they like, have them wear earphones/headphones during this.</li>
+                        <li><strong>Best Time:</strong> Try to ensure they aren't due for a nap or a meal during the appointment time.</li>
+                    </ul>
+
+                    <a href="https://youtu.be/_B6-IxDVBFo" target="_blank" class="video-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        Watch Video: What to Expect
+                    </a>
+                </div>
+            </article>
+
+            <article class="age-card">
+                <div class="card-header">
+                    <span class="age-label">Preschool & School Age</span>
+                    <h2>3 Years and Onwards</h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Play Audiometry</strong></p>
+                    <p style="margin-top:10px; font-size:0.9rem; color:var(--nhs-grey-2);">Your child will be taught to perform a simple task (like moving a block) every time they hear a sound through headphones.</p>
+                    
+                    <ul class="checklist">
+                        <li><strong>Listening Games:</strong> Practice "Stop and Go" games where they wait for your signal to move a toy.</li>
+                        <li><strong>Reward:</strong> Plan a small positive activity or treat that your child can have after they complete their test. Reward them with positivity when wearing earphones or when practicing the listening game.</li>
+                        <li><strong>Superhero Check:</strong> Tell them they are going to play a special superhero hearing game.</li>
+                    </ul>
+
+                    <a href="https://www.youtube.com/watch?v=RfufTsUrGHo" target="_blank" class="video-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        Watch Video: Practising for the Test
+                    </a>
+                </div>
+            </article>
+
+            <section class="social-story-section">
+                <h2>Social Story</h2>
+                <p style="margin-bottom: 20px; color: var(--nhs-grey-2);">Use this video to help walk your child through the journey of visiting the clinic and playing the listening game.</p>
+                <a href="https://youtu.be/9BWePZ77oVI" target="_blank" class="video-btn" style="max-width: 400px; margin: 0 auto;">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    Watch Social Story: The Listening Game
+                </a>
+            </section>
+
+            <section class="admin-notice">
+                <div>
+                    <strong>For Clinic Staff:</strong>
+                    <p style="font-size: 0.85rem;">Include this link or a QR code in Barts Health appointment letters.</p>
+                </div>
+                <button class="copy-btn" onclick="copyTemplate()">Copy Letter Template</button>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Barts Health NHS Trust - Audiology Department</p>
+    </footer>
+
+    <script>
+        function copyTemplate() {
+            const text = "To help prepare your child for their hearing test, please visit our preparation guide here: [Link]";
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Letter template copied to clipboard!");
+            });
+        }
+    </script>
+
+</body>
+</html>
